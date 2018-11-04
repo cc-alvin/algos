@@ -30,8 +30,6 @@ public class HeapSort<T extends Comparable<T>> extends Sort<T> {
         for (temp = a[pos]; 2 * pos + 1 <=len; pos = child) {
             child = 2 * pos + 1;
             if (child < len&& less(a[child +1], a[child])) {
-                if(child>=len-2)
-                    System.out.println("*****");
                 child++;
             }
             if (less(a[child],temp)) {
