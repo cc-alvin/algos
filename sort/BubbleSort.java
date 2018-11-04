@@ -22,9 +22,10 @@ public class BubbleSort<T extends Comparable<T>> extends Sort<T> {
         for (int i = N - 1; i > 0 && !hasSorted; i--) {
             hasSorted = true;
             for (int j = 0; j < i; j++) {
-                hasSorted = false;
+               
                 if (less(nums[j + 1], nums[j])) {
                     swap(nums, j + 1, j);
+                     hasSorted = false;
                 }
             }
         }
